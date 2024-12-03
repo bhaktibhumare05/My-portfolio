@@ -1,0 +1,695 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+
+ body{
+     background-color:rgb(250, 249, 247);
+ }
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    background-color: navy;
+    position: sticky;
+    /* top: 0; */
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.navbar div {
+    color: white;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.navbar div a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+
+.menu-icon {
+    /* display: none; */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+    display: block;
+}
+.navbar ul i{
+    position: absolute;
+    color: white;
+    display: none;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: rgb(232, 219, 255);
+}
+
+@media (max-width: 430px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: navy;
+        /* position: absolute; */
+        /* top: 60px; */
+        left: 0;
+        z-index: -1;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        display: none;
+    }
+    .navbar ul i{
+        display: block;
+    }
+    .navbar ul li a {
+        padding: 15px;
+        display: block;
+        font-size: 1.2rem;
+    }
+
+}
+#Home {
+    display: flex;
+    flex-direction: column;  
+    background-color: rgb(242, 242, 249);
+    height: auto; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px; 
+    position: relative; 
+}
+
+#Home::before {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    height: 900px; 
+    width: 100%;
+    z-index: -1;
+}
+
+#Home img {
+    width: 350px; 
+    height: 350px; 
+    border-radius: 70%;
+    background-color: rgb(211, 206, 206);
+}
+
+#Home img:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 20px grey; 
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25%;
+    right: 10%;
+    height: auto; 
+    width: 90%; 
+    margin-left: 0; 
+    align-items: center; 
+}
+
+.heading {
+    color: black;
+    font-size: 56px; 
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.heading:hover {
+    cursor: auto;
+    color: rgb(8, 63, 139);
+    text-shadow: 0 0 4px skyblue;
+}
+
+.button {
+    width: 150px; 
+    height: 41px;
+    margin-top: 20px; 
+    background-color: transparent;
+    border: 1px solid grey;
+    color: black;
+    outline: none;
+    transition: .6s ease;
+    border-radius: 18px;
+    font-size: 15px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: grey;
+    color: black;
+    box-shadow: 0 0 5px grey;
+    font-weight: bold;
+}
+
+.home_contact {
+    height: 70px;
+    width: 90%; 
+    color: black;
+    margin-top: 20px; 
+    text-align: center; 
+    font-size: 25px;
+}
+.home_contact a{
+    font-size: 20px;
+}
+
+.main .home_contact i {
+    font-size: 25px; 
+    color: black;
+}
+
+.main .home_contact a {
+    text-decoration: none;
+    color: rgb(52, 98, 234);
+}
+
+.main .home_contact a:hover {
+    color: rgb(13, 71, 165);
+    font-weight: bold;
+}
+
+@media (max-width: 430px) {
+    #Home {
+        padding: 10px; 
+    }
+
+    #Home img {
+        width: 180px; 
+        height: 180px; 
+    }
+
+    .heading {
+        font-size: 28px; 
+        margin-top: 10px; 
+    }
+
+    .button {
+        width: 80px;
+        height: 30px; 
+    }
+
+    .home_contact {
+        width: 100%; 
+        margin-top: 10px; 
+    }
+}
+
+/* About section */
+.About {
+    width: 100%;
+    height: auto; 
+    display: inline-block;
+    padding: 20px; 
+}
+
+h2 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px; 
+}
+
+#about img {
+    margin-left: 150px; 
+    margin-top: 40px; 
+    width: 250px; 
+    height: 250px; 
+    border-radius: 70%;
+    box-shadow: 0 0 9px rgb(121, 120, 120);
+}
+
+.about_text {
+    margin-top: -200px; 
+    margin-left: 0; 
+    text-align: center; 
+}
+
+.about_text h4 {
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 30px; 
+    color: solid white;
+    text-shadow: 1.3px 0 0 grey;
+}
+
+.about_me {
+    margin-left: 300px;
+    margin-right: 300px; 
+    margin-top: 20px; 
+    background-color: rgb(250, 247, 247);
+    box-shadow: 0 3px 3px grey;
+    border-radius: 50px;
+    height: auto; 
+    padding: 10px;  
+}
+
+.hello {
+    color: solid white;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: "Trebuchet MS";
+    margin: 10px; 
+}
+
+.about_text p {
+    margin: 10px; 
+    margin-bottom: 20px;
+    font-size: 18px; 
+    font-family: Trebuchet MS;
+    text-align: center; 
+}
+
+.about_text p span {
+    font-size: 20px; 
+    color: rgb(67, 67, 147);
+    font-weight: 600;
+    font-family: "Trebuchet MS";
+}
+
+.about_text p span:hover {
+    color: black;
+    cursor: default;
+}
+
+.text {
+    height: auto; 
+    width: 400px; 
+    line-height: 32px;
+    margin: 20px auto;
+    font-size: 18px; 
+    font-family: "Trebuchet MS";
+}
+
+@media (max-width: 430px) {
+    h2 {
+        font-size: 30px; 
+    }
+
+    #about img {
+        margin-left: 100px;
+        width: 200px; 
+        height: 200px; 
+    }
+
+    .about_text h4 {
+        font-size: 28px; 
+        margin-top: 200px;
+    }
+
+    .hello {
+        font-size: 22px; 
+    }
+
+    .about_text p {
+        font-size: 16px; 
+    }
+
+    .about_text p span {
+        font-size: 18px; 
+    }
+
+    .text {
+        font-size: 16px; 
+    }
+}
+
+/* Project section */
+#project {
+    margin-top: 100px;
+    width: 100%;
+    height: auto; 
+}
+.contact-container {   
+    width: 100%;
+    height: auto; 
+    display: inline-block;
+    padding: 20px; 
+}
+.portfolio_project {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.Project{
+    margin-left: 300px;
+    margin-right: 300px; 
+    margin-top: 20px; 
+    background-color: rgb(250, 247, 247);
+    box-shadow: 0 3px 3px grey;
+    border-radius: 50px;
+    height: auto; 
+    padding: 10px; 
+}
+
+
+.project h2 {
+    margin-top: 40px;
+    font-family: "Trebuchet MS";
+    text-shadow: 0 0 4px grey;
+    text-align: center; 
+}
+
+.youtube,
+.linkdin,
+.google {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    background-color: rgb(249, 232, 235);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.youtube img,
+.linkdin img,
+.google img {
+    margin-top: 20px;
+    width: 150px; 
+    height: 150px; 
+}
+
+.youtube h3,
+.linkdin h3,
+.google h3 {
+    margin-top: 20px;
+    font-family: "Trebuchet MS";
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: center;
+}
+
+.yt_text,
+.Ld_text,
+.Google_text {
+    width: 90%; 
+    height: auto;
+    margin: 10px auto; 
+    font-size: 15px;
+    font-family: "Trebuchet MS";
+    color: rgb(46, 46, 46);
+    text-align: center; 
+}
+
+.ytbutton,
+.Ldbutton,
+.Gbutton {
+    height: 40px;
+    width: 150px;
+    background-color: pink;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: none;
+}
+
+.ytbutton:hover,
+.Ldbutton:hover,
+.Gbutton:hover {
+    cursor: pointer;
+    background-color: rgb(242, 157, 169);
+    box-shadow: 0 0 5px rgb(245, 112, 135);
+    font-weight: bold;
+}
+
+.ytbutton a,
+.Ldbutton a,
+.Gbutton a {
+    text-decoration: none;
+    color: black;
+    margin: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.youtube:hover,
+.linkdin:hover,
+.google:hover {
+    cursor: default;
+    box-shadow: 0 3px 20px grey; 
+}
+.contact-container {   
+    width: 100%;
+    height: auto; 
+    display: inline-block;
+    padding: 20px; 
+}
+
+.contact_me{
+    margin-left: 300px;
+    margin-right: 300px; 
+    margin-top: 20px; 
+    background-color: rgb(250, 247, 247);
+    box-shadow: 0 3px 3px grey;
+    border-radius: 50px;
+    height: auto; 
+    padding: 10px; 
+}
+.contact-form h2{
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    /* margin-left: 0px;  */
+}
+.contact-form{
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 350px;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label{
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-form input{
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form textarea{
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form input:hover{
+    box-shadow: 0 3px 3px;
+}
+
+.contact-form textarea:hover{
+    box-shadow: 0 3px 3px;
+}
+
+.contact-form button{
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(107, 210, 250);
+    color: black;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 22px;
+    height: 48px;
+}
+
+.contact-form button:hover{
+    cursor: pointer;
+    background-color: rgb(4, 178, 198);
+    color: black;
+    box-shadow: 0 0 5px grey;
+    font-weight: bold;
+} 
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+}
+@media (max-width: 430px) {
+    .Project {
+        width: 90%;
+    }
+
+    .youtube,
+    .linkdin,
+    .google {
+        width: 90%;
+        margin: 20px auto; 
+
+    .youtube h3,
+    .linkdin h3,
+    .google h3 {
+        font-size: 20px; 
+    }
+
+    .yt_text,
+    .Ld_text,
+    .Google_text {
+        font-size: 14px;
+    }
+
+    .ytbutton,
+    .Ldbutton,
+    .Gbutton {
+        width: 120px;
+    }
+}
+.contact-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 700px; 
+    margin: 0 auto; 
+}
+
+.contact_me {
+    width: 100%; 
+    max-width: 700px; 
+    height: 50px;
+    box-shadow: 0 3px 3px grey;
+    border-radius: 24px;
+    margin: 20px auto; 
+}
+
+.contact-form h2 {
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: 28px;
+    text-align: center; 
+}
+
+.contact-form {
+    margin: 20px auto; 
+    padding: 0 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    box-shadow: 0 3px 3px grey;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(107, 210, 250);
+    color: black;
+    font-size: 16px;
+    border-radius: 22px;
+    height: 48px;
+    cursor: pointer;
+    margin: 0 auto; 
+}
+
+.contact-form button:hover {
+    background-color: rgb(4, 178, 198);
+    color: black;
+    box-shadow: 0 0 5px grey;
+    font-weight: bold;
+}
+}
+@media (max-width: 430px) {
+    .contact-container {
+        padding: 10px; 
+    }
+
+    .contact-form h2 {
+        font-size: 24px; 
+        margin-top: 30px; 
+        /* margin-left: 30px; */
+    }
+
+    .contact_me {
+        width: 90%; 
+        height: 45px; 
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; 
+    }
+
+    .contact-form button {
+        font-size: 14px; 
+        height: 40px; 
+    }
+}
+
+.footer{
+    
+}
